@@ -1,0 +1,38 @@
+/* CSS Variables */
+:root {
+  --neue-haas-unica-pro: "Neue Haas Unica Pro", sans-serif;
+  --sang-bleu-kingdom: "Sang Bleu Kingdom", sans-serif;
+  --source-code-pro: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Font-Family */
+@import url("https://fonts.googleapis.com/css2?family=Alike&family=Bodoni+Moda&family=Montserrat&display=swap");
+
+@font-face {
+  font-family: "Neue Haas Unica Pro";
+  src: url("./assets/fonts/NeueHaasUnicaPro-Regular.otf");
+}
+
+@font-face {
+  font-family: "Sang Bleu Kingdom";
+  src: url("./assets/fonts/SangBleuKingdom-Regular.otf");
+}
+
+/* Global Style Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--neue-haas-unica-pro);
+  font-weight: 400;
+}
+
+code {
+  font-family: var(--source-code-pro);
+}

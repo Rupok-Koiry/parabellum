@@ -1,0 +1,355 @@
+/* CSS Variables */
+:root {
+  --montserrat: "Montserrat", sans-serif;
+  --bodoni-moda: "Bodoni Moda", serif;
+  --alike: "Alike", serif;
+  --white: #fff;
+  --black: #000;
+  --black-opacity: rgba(0, 0, 0, 0.6);
+  --beige: rgba(222, 184, 135, 0.33);
+  --dark-grey: #2d2d2b;
+  --light-beige: #e2ddcd;
+}
+
+/* Common Styling */
+.header,
+.contact,
+.footer {
+  font-family: var(--montserrat);
+  color: var(--white);
+}
+.header,
+.banner,
+.about-us,
+.video-section,
+.challenges,
+.contact,
+.footer {
+  width: 100%;
+}
+.header .nav-link,
+.banner h1,
+.contact-content p a {
+  color: var(--white);
+}
+.about-us {
+  padding: 120px 0;
+}
+.about-us h2,
+.challenge h2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+.about-us h2::after,
+.challenge h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  margin: 30px auto;
+}
+.about-us p,
+.challenge-content p {
+  font-size: 15px;
+}
+.video {
+  width: 100%;
+  display: block;
+}
+
+/* Header Section Styling */
+.header {
+  position: fixed;
+  top: 0;
+  background: var(--black-opacity);
+  z-index: 2;
+}
+.header .navbar {
+  padding: 25px 0 15px;
+}
+.header .nav-link {
+  font-size: 16px;
+  padding: 0 8px;
+}
+.header .logo {
+  height: 38px;
+  margin-bottom: 15px;
+}
+.header .navbar-toggler {
+  border: none;
+}
+.header .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='30' height='30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Banner Section Styling */
+.banner {
+  background: url("./assets/images/banner.jpeg") no-repeat center / cover;
+  height: 95vh;
+  position: relative;
+  font-family: var(--bodoni-moda);
+}
+.banner h1 {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 75px;
+  font-weight: 400;
+  width: 100%;
+}
+.banner h1 span {
+  margin: 90px 0;
+  display: block;
+}
+/* About Section Styling */
+.about-us {
+  background: var(--beige);
+  font-family: var(--alike);
+}
+.about-us h2::after {
+  background: var(--black);
+}
+.about-us h3 {
+  font-size: 20px;
+}
+.about-us p:first-of-type {
+  font-size: 20px;
+  margin: 45px 0 25px;
+}
+
+/* Video section Styling */
+.video-section {
+  background: var(--black);
+  padding: 60px 0;
+}
+
+/* Challenge Section Styling */
+.challenges {
+  font-family: var(--bodoni-moda);
+  text-align: center;
+}
+.challenge {
+  height: 525px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.espionage {
+  background: url("./assets/images/Pb_Shadow-and-light.jpg") no-repeat center /
+    cover;
+}
+.desert {
+  background: url("./assets/images/shutterstock_343854320.jpg") no-repeat center /
+    cover;
+}
+.challenge h2,
+.challenge h3 {
+  margin: 0;
+}
+.challenge h3 {
+  font-size: 25px;
+}
+.challenge h2::after {
+  width: 145px;
+  margin: 30px auto;
+}
+.espionage h2,
+.espionage h3 {
+  color: var(--white);
+}
+.espionage h2::after {
+  background-color: var(--white);
+}
+.desert h2,
+.desert h3 {
+  color: var(--black);
+}
+.desert h2::after {
+  background: var(--black);
+}
+
+.challenge-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+.espionage-content {
+  background-color: var(--dark-grey);
+  color: var(--white);
+}
+.desert-content {
+  background-color: var(--light-beige);
+  color: var(--black);
+}
+.challenge-content h4,
+.challenge-content p {
+  width: 50%;
+}
+.challenge-content h4 {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.challenge-content p {
+  font-weight: 400;
+  margin-top: 40px;
+}
+
+/* Contact Section Styling */
+.contact {
+  background: url("./assets/images/contact.jpeg") no-repeat center / cover;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-content {
+  display: flex;
+  align-items: center;
+}
+.contact-content h3 {
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.contact-content span::after {
+  content: "";
+  display: block;
+  background-color: var(--white);
+  width: 1.5px;
+  height: 75px;
+  margin: 0 25px;
+}
+.contact-content p {
+  font-size: 17px;
+}
+
+/* Footer Section Styling */
+.footer {
+  background: var(--dark-grey);
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer p {
+  font-size: 17px;
+  text-align: center;
+  margin: 0;
+}
+
+/* Media Query */
+@media only screen and (max-width: 768px) {
+  .header {
+    background: var(--black);
+  }
+  .header .navbar {
+    padding: 20px 0;
+  }
+  .header .nav-link {
+    font-size: 14px;
+    padding: 0;
+    text-align: center;
+    margin: 8px 0;
+  }
+  .header .logo {
+    height: 30px;
+    margin-bottom: 0;
+    margin-left: -54px;
+  }
+
+  /* Banner */
+  .banner {
+    height: 60vh;
+  }
+  .banner h1 {
+    top: 56%;
+    font-size: 40px;
+  }
+  .banner h1 span {
+    margin: 45px 0;
+  }
+  /* About */
+  .about-us {
+    padding: 60px 0;
+  }
+  .about-us h2 {
+    font-size: 28px;
+  }
+  .about-us h2::after {
+    margin: 25px auto;
+    width: 90px;
+  }
+  .about-us h3 {
+    font-size: 15px;
+  }
+  .about-us p:first-of-type {
+    font-size: 15px;
+    margin: 40px 0 20px;
+  }
+  .about-us p {
+    font-size: 12px;
+  }
+  /* Video */
+  .video-section {
+    padding: 30px 0;
+  }
+  /* Challenge */
+
+  .challenge {
+    height: 375px;
+  }
+
+  .challenge h2 {
+    font-size: 28px;
+  }
+  .challenge h3 {
+    font-size: 20px;
+  }
+  .challenge h2::after {
+    margin: 23px auto;
+  }
+
+  .challenge-content {
+    padding: 60px 0;
+  }
+
+  .challenge-content h4,
+  .challenge-content p {
+    width: 80%;
+  }
+  .challenge-content h4 {
+    font-size: 18px;
+  }
+  .challenge-content p {
+    margin-top: 25px;
+    font-size: 12px;
+  }
+  /* Contact */
+  .contact {
+    height: 280px;
+  }
+  .contact-content h3 {
+    font-size: 22px;
+  }
+  .contact-content span::after {
+    height: 40px;
+    margin: 0 20px;
+  }
+  .contact-content p {
+    font-size: 12px;
+  }
+  /* Footer */
+  .footer {
+    padding: 20px 0;
+  }
+  .footer p {
+    font-size: 12px;
+  }
+}
