@@ -58,11 +58,14 @@
 }
 
 /* Header Section Styling */
-.header {
+.header.light {
   position: fixed;
   top: 0;
   background: var(--black-opacity);
   z-index: 2;
+}
+.header.dark {
+  background: var(--black);
 }
 .header .navbar {
   padding: 25px 0 15px;
@@ -352,4 +355,22 @@
   .footer p {
     font-size: 12px;
   }
+}
+
+.fade-enter {
+  opacity: 1;
+}
+
+.fade-enter-active {
+  opacity: 0;
+  transition: opacity 1000ms; /* Fade out duration */
+}
+
+.fade-exit {
+  opacity: 0;
+}
+
+.fade-exit-active {
+  opacity: 1;
+  transition: opacity 1000ms; /* Fade in duration */
 }

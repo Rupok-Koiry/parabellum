@@ -1,24 +1,19 @@
 import "./App.css";
 import React from "react";
-import Banner from "./components/Banner/Banner";
-import AboutUs from "./components/AboutUs/AboutUs";
-import Header from "./components/Header/Header";
-import Video from "./components/Video/Video";
-import Challenge from "./components/Challenge/Challenge";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Espionage from "./pages/Espionage";
+import Desert from "./pages/Desert";
 
 function App() {
   return (
-    <React.Fragment>
-      <Header />
-      <Banner />
-      <AboutUs />
-      <Video />
-      <Challenge />
-      <Contact />
-      <Footer />
-    </React.Fragment>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/espionage-challenge" element={<Espionage />} />
+        <Route path="/desert-challenge" element={<Desert />} />
+      </Routes>
   );
 }
 
