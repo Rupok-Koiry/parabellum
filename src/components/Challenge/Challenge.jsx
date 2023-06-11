@@ -47,7 +47,7 @@ const Challenge = () => {
               DESERT <br />
               CHALLENGE
             </h2>
-            <h3>Challenge 0001/2018</h3>
+            <h3>Challenge 0002/2018</h3>
           </div>
         </div>
       </div>
