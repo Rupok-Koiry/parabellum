@@ -1,9 +1,9 @@
 import React from "react";
 import logo from "../../assets/images/LogoMaster.png";
 
-const Header = () => {
+const Header = ({ headerBg }) => {
   return (
-    <header className="header">
+    <header className={`header ${headerBg}`}>
       <nav className="navbar navbar-expand-md">
         <div className="container-fluid flex-md-column">
           <button
@@ -42,11 +42,6 @@ const Header = () => {
               <li className="nav-item">
                 <a className="nav-link" href="/">
                   Contact Us
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Member Login
                 </a>
               </li>
             </ul>
