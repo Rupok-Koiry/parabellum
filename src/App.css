@@ -48,6 +48,9 @@
   height: 1px;
   margin: 30px auto;
 }
+.challenge .about-page-title::after {
+  display: none;
+}
 .about-us p,
 .challenge-content p {
   font-size: 15px;
@@ -87,7 +90,8 @@
 
 /* Banner Section Styling */
 .banner {
-  background: url("./assets/images/banner.png") no-repeat center / cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./assets/images/banner.png") no-repeat center / cover;
   height: 960px;
   position: relative;
   font-family: var(--bodoni-moda);
@@ -142,17 +146,19 @@
 .page-challenges .challenge {
   height: 838px;
 }
+.page-challenges .challenge-content h2 br {
+  display: none;
+}
 .section-challenges .challenge {
   height: 525px;
 }
-.espionage {
-  background: url("./assets/images/Pb_Shadow-and-light.jpg") no-repeat center /
-    cover;
-}
+.espionage,
 .desert {
-  background: url("./assets/images/shutterstock_343854320.jpg") no-repeat center /
-    cover;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 .challenge h2,
 .challenge h3 {
   margin: 0;
@@ -198,6 +204,7 @@
 .challenge-content h4,
 .challenge-content p {
   width: 50%;
+  margin: 0;
 }
 .challenge-content h4 {
   font-size: 25px;
@@ -207,6 +214,13 @@
 .challenge-content p {
   font-weight: 400;
   margin-top: 40px;
+}
+.link {
+  font-size: 25px;
+  margin-top: 120px;
+  text-decoration: none;
+  color: #7c7c7c;
+  display: block;
 }
 
 /* Contact Section Styling */
@@ -310,6 +324,7 @@
   .about-us p {
     font-size: 12px;
   }
+
   /* Video */
   .video-section {
     padding: 30px 0;
@@ -319,7 +334,9 @@
   .page-challenges .challenge {
     height: 375px;
   }
-
+  .page-challenges .challenge-content h2 br {
+    display: block;
+  }
   .challenge h2 {
     font-size: 28px;
   }
@@ -345,6 +362,13 @@
     margin-top: 25px;
     font-size: 12px;
   }
+  .challenge-content .about-page-text {
+    font-size: 15px;
+  }
+  .link {
+    font-size: 12px;
+    margin-top: 35px;
+  }
   /* Contact */
   .contact {
     height: 280px;
@@ -368,20 +392,21 @@
   }
 }
 
+/* .... */
 .fade-enter {
-  opacity: 1;
+  opacity: 0;
 }
 
 .fade-enter-active {
-  opacity: 0;
-  transition: opacity 1000ms; /* Fade out duration */
+  opacity: 1;
+  transition: opacity 1000ms;
 }
 
 .fade-exit {
-  opacity: 0;
+  opacity: 1;
 }
 
 .fade-exit-active {
-  opacity: 1;
-  transition: opacity 1000ms; /* Fade in duration */
+  opacity: 0;
+  transition: opacity 1000ms;
 }
