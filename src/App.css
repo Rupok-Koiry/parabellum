@@ -134,11 +134,16 @@
   text-align: center;
 }
 .challenge {
-  height: 525px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.page-challenges .challenge {
+  height: 838px;
+}
+.section-challenges .challenge {
+  height: 525px;
 }
 .espionage {
   background: url("./assets/images/Pb_Shadow-and-light.jpg") no-repeat center /
@@ -310,8 +315,8 @@
     padding: 30px 0;
   }
   /* Challenge */
-
-  .challenge {
+  .section-challenges .challenge,
+  .page-challenges .challenge {
     height: 375px;
   }
 

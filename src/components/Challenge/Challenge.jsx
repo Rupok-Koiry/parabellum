@@ -1,53 +1,62 @@
-import React from "react";
+import React, { useEffect, useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 
-const Challenge = () => {
+// Custom hook for window size
+const useWindowSize = () => {
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return windowSize;
+};
+
+const Challenge = ({ type, bgImg, className, link, content, order }) => {
+  const windowSize = useWindowSize();
+
+  const isLargeScreen = useMemo(() => windowSize > 768, [windowSize]);
+
+  const lowerContentDesktop = useMemo(
+    () => (
+      <p>
+        {content.lower.props.children[0].props.children}
+        {content.lower.props.children[1].props.children}
+      </p>
+    ),
+    [content.lower]
+  );
+
   return (
-    <section className="challenges">
+    <section className={`${type}-challenges challenges`}>
       <div className="row m-0 p-0">
-        <div className="col-md-6 col-12 p-0 order-1">
-          <div className="espionage challenge">
-            <h2>
-              ESPIONAGE <br />
-              CHALLENGE
-            </h2>
-            <h3>Challenge 0001/2018</h3>
-          </div>
+        <div
+          className={`col-md-6 col-12 p-0 order-${
+            order[isLargeScreen ? "lg" : "sm"][0]
+          } ${className} challenge`}
+          style={{ backgroundImage: `url(${bgImg})` }}
+        >
+          {(!isLargeScreen || type === "section") && content.upper}
         </div>
-        <div className="col-md-6 col-12 p-0 order-2">
-          <div className="challenge-content espionage-content">
-            <h4>You are undercover.</h4>
-            <p>
-              Your mission is conducted under real-life conditions. Tailored to
-              your capabilities and personal profile, our Espionage experience
-              challenges you across all areas and stretches the limits of both
-              your skill set and your imagination.
-            </p>
-          </div>
-        </div>
-        <div className="col-md-6 col-12 p-0 order-md-3 order-4">
-          <div className="challenge-content desert-content">
-            <h4>
-              Dropped into desert conditions, this is a mission where
-              preparation is key.
-            </h4>
-            <p>
-              Combining a variety of techniques and real-life circumstances, you
-              will need to understand your survival skills and capabilities to
-              escape in order to save your life, and others. As you are pursued
-              by elite special forces veterans you will encounter extreme events
-              and deal with uncertain situations and a loss of control in order
-              to learn mental and physical techniques for you to remain in
-              control.
-            </p>
-          </div>
-        </div>
-        <div className="col-md-6 col-12 p-0 order-md-4 order-3">
-          <div className="desert challenge">
-            <h2>
-              DESERT <br />
-              CHALLENGE
-            </h2>
-            <h3>Challenge 0002/2018</h3>
+        <div
+          className={`col-md-6 col-12 p-0 order-${
+            order[isLargeScreen ? "lg" : "sm"][1]
+          }`}
+        >
+          <div className={`challenge-content ${className}-content`}>
+            {type === "page" && isLargeScreen && content.upper}
+            {type === "page" && isLargeScreen
+              ? lowerContentDesktop
+              : content.lower}
+            {type === "page" && <Link to={link}>Details</Link>}
           </div>
         </div>
       </div>
