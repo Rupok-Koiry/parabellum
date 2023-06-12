@@ -87,8 +87,8 @@
 
 /* Banner Section Styling */
 .banner {
-  background: url("./assets/images/banner.jpeg") no-repeat center / cover;
-  height: 95vh;
+  background: url("./assets/images/banner.png") no-repeat center / cover;
+  height: 960px;
   position: relative;
   font-family: var(--bodoni-moda);
 }
@@ -253,6 +253,12 @@
 }
 
 /* Media Query */
+@media only screen and (max-width: 1200px) {
+  .challenge-content h4,
+  .challenge-content p {
+    width: 70%;
+  }
+}
 @media only screen and (max-width: 768px) {
   .header {
     background: var(--black);
