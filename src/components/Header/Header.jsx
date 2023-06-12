@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../assets/images/LogoMaster.png";
-
+import { Link } from "react-router-dom";
 const Header = ({ headerBg }) => {
   return (
     <header className={`header ${headerBg}`}>
@@ -18,29 +18,29 @@ const Header = ({ headerBg }) => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <a href="/" className="d-block mx-auto">
+          <Link to="/" className="d-block mx-auto">
             <img src={logo} alt="Logo" className="logo" />
-          </a>
+          </Link>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="/">
+                <Link className="nav-link" to="/about-us">
                   About Us
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <Link className="nav-link" to="/espionage-challenge">
                   Espionage Challenge
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <Link className="nav-link" to="/desert-challenge">
                   Desert Challenge
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <a className="nav-link" href="#contact">
                   Contact Us
                 </a>
               </li>
