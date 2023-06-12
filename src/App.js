@@ -8,12 +8,12 @@ import Desert from "./pages/Desert";
 
 function App() {
   return (
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<About />} />
-        <Route path="/espionage-challenge" element={<Espionage />} />
-        <Route path="/desert-challenge" element={<Desert />} />
-      </Routes>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about-us" element={<About />} />
+      <Route path="/espionage-challenge" element={<Espionage />} />
+      <Route path="/desert-challenge" element={<Desert />} />
+    </Routes>
   );
 }
 
