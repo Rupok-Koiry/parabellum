@@ -27,7 +27,8 @@ const Banner = () => {
           unmountOnExit
         >
           <h1>
-            IF YOU WANT PEACE <br />
+            IF YOU <br />
+            WANT PEACE <br />
             PREPARE FOR WAR
           </h1>
         </CSSTransition>

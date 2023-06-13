@@ -21,11 +21,12 @@ const About = () => {
           lower: (
             <React.Fragment>
               <p className="about-page-text">
-                Ultimate capability. Calm in adversity.Parabellum offers
-                tailored training programmes and unique, intelligent experiences
-                to equip elite individuals with the skills, intuition and
-                preparation they require to function professionally at the
-                highest level.
+                Ultimate capability. Calm in adversity.
+                <br />
+                Parabellum offers tailored training programmes and unique,
+                intelligent experiences to equip elite individuals with the
+                skills, intuition and preparation they require to function
+                professionally at the highest level.
               </p>
               <p className="about-page-text">
                 Founded by members of Israeli intelligence communities and elite
